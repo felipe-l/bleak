@@ -40,7 +40,13 @@
 			<footer id="footer">
 				<section class="credits">
                     <span class="credits-theme"><!-- <i class="fa fa-facebook"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter"></i><i class="fa fa-linkedin"></i></br></br><a href="/contact" style="font-size:35px;">Contact</a>--></span>
-                    <span class="credits-software"><a style="font-size:35px; padding-bottom:5px;">Newsletter</a> </br> <a style="font-size:15px;">Sign up to our newsletter and never miss a post.</a> </br></br><input id="footer_email" type="text" value="" placeholder="Enter your e-mail" novalidate="" autocomplete="off">
+                    <span class="credits-software"><!--<a style="font-size:35px; padding-bottom:5px;">Newsletter</a> </br> <a style="font-size:15px;">Sign up to our newsletter and never miss a post.</a> </br></br><input id="footer_email" type="text" value="" placeholder="Enter your e-mail" novalidate="" autocomplete="off">-->
+            {{#if @labs.subscribers}}
+            <aside class="post-subscribe">
+	            <p>Get the latest posts delivered right to your inbox.</p>
+                {{subscribe_form placeholder="Your email address" form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
+            </aside>
+            {{/if}}
             </br>
         </br>
     <a href="https://facebook.com"><i class="fa fa-facebook"></a></i><a href="https://instagram.com"><i class="fa fa-instagram"></i></a><a href="https://twitter.com"><i class="fa fa-twitter"></i></a><a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
